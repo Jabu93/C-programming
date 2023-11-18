@@ -67,16 +67,19 @@
       <button>Apply Now</button>
     </section>
     <script>
-      function SpeakPortuguese() {
-        let country = prompt("What country are you from?");
-
-        if (country === "Brazil" || country === "Portugal") {
-          alert("You speak portugese");
+      function applyNow() {
+        let name = prompt("What is your name");
+        let age = prompt("How old are you?");
+        if (age >= 18) {
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "Hi, " + name + "! Welcome to SheCodes !";
         } else {
-          alert("Go learn portugese");
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "Sorry, " + name + " You cannot join SheCodes";
         }
       }
-      SpeakPortuguese();
+      let contactButton = document.querySelector("button");
+      contactButton.addEventListener("click", applyNow);
     </script>
   </body>
 </html>
