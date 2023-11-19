@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soft Elegance</title>
+    <style>
+      body {
+        background: radial-gradient(
+          328px at 2.9% 15%,
+          rgb(191, 224, 251) 0%,
+          rgb(232, 233, 251) 25.8%,
+          rgb(252, 239, 250) 50.8%,
+          rgb(234, 251, 251) 77.6%,
+          rgb(240, 251, 244) 100.7%
+        );
+      }
+      h1 {
+        text-align: center;
+        padding: 20px;
+        font-size: 50px;
+        margin: 0 auto;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      h2 {
+        margin-top: 0px;
+        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      h3 {
+        margin-left: 18px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        padding: 30px;
+        border-radius: 200px;
+      }
+      p {
+        margin: auto;
+        padding: 20px;
+        text-align: justify;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .outfits {
+        text-decoration: none;
+      }
+      button {
+        text-align: center;
+        font-size: large;
+        padding: 20px;
+        display: block;
+        margin: 0 auto;
+        background-color: transparent;
+        border-radius: 30px;
+        border-width: 3px;
+        border-color: #4c0d17;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background: #4c0d17;
+        color: beige;
+        cursor: pointer;
+      }
+      .footer {
+        margin-top: 30px;
+        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>House of Elegance</h1>
+    <h2>The soft Elegant girl aesthetic</h2>
+
+    <img
+    src=https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/364/original/6bdd75f89b19feb03e3b81dadf44bdca.png?1700380718
+    width=300 />
+    <h3>What is soft elegance?</h3>
+    <p>
+      A celebration of being sweet, soft, sensitive, and care free. Soft
+      elegance is can be defined as the quality of being graceful and stylish in
+      appearance or manner. The ability to tastefully combine fine or luxurious
+      pieces, style, design, and elegant furnishings. Elegance in itself can
+      mean being gracefully refined and dignified, as in tastes, habits, or
+      literary style: examples being an elegant young lady; an elegant
+      prosodist, an aesthetic. Let us help you elevate your look to a more
+      elegant style. Check out these
+      <a
+        href="https://za.pinterest.com/ideas/soft-ethereal-aesthetic-outfits/914199526415/"
+        target="_blank"
+        class="outfits"
+      >
+        outfit recommendations.
+      </a>
+    </p>
+    <button>Learn more</button>
+    <div class="footer">Coded by Jabulile Mbatha</div>
+  </body>
+  <script>
+    function learnMore() {
+      let name = prompt("What is your name");
+      let intent = prompt("Would you like to elevate your style?");
+      let h1 = document.querySelector("h1");
+      if (intent === "yes") {
+        h1.innerHTML = "Hi, " + name + "! Welcome to House of elegance!";
+      } else {
+        h1.innerHTML = "🥺, " + " Sorry to see you go " + name;
+      }
+    }
+    let contactButton = document.querySelector("button");
+    contactButton.addEventListener("click", learnMore);
+  </script>
+</html>
