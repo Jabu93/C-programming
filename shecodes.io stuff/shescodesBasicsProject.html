@@ -31,7 +31,7 @@
         margin-left: 18px;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
-      img {
+      .header {
         display: block;
         margin: 0 auto;
         padding: 30px;
@@ -45,6 +45,18 @@
       }
       .outfits {
         text-decoration: none;
+      }
+      .lookBook {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 100px;
+        margin: 0 auto;
+      }
+      .looks {
+        margin-bottom: 50px;
+        text-align: center;
+        display: block;
       }
       button {
         text-align: center;
@@ -78,7 +90,7 @@
 
     <img
     src=https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/364/original/6bdd75f89b19feb03e3b81dadf44bdca.png?1700380718
-    width=300 />
+    width=300 class="header" />
     <h3>What is soft elegance?</h3>
     <p>
       A celebration of being sweet, soft, sensitive, and care free. Soft
@@ -88,15 +100,17 @@
       mean being gracefully refined and dignified, as in tastes, habits, or
       literary style: examples being an elegant young lady; an elegant
       prosodist, an aesthetic. Let us help you elevate your look to a more
-      elegant style. Check out these
-      <a
-        href="https://za.pinterest.com/ideas/soft-ethereal-aesthetic-outfits/914199526415/"
-        target="_blank"
-        class="outfits"
-      >
-        outfit recommendations.
-      </a>
+      elegant style.
     </p>
+    <a target="_blank" href="https://pin.it/1LIZ1sT" class="looks"
+      ><img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/509/original/f44d118c6af21f334ff985b785944595.jpg?1700498283"
+        width="300"
+        class="lookBook"
+      />
+      <br />
+      Look Book
+    </a>
     <button>Learn more</button>
     <div class="footer">Coded by Jabulile Mbatha</div>
   </body>
@@ -104,6 +118,9 @@
     function learnMore() {
       let name = prompt("What is your name");
       let intent = prompt("Would you like to elevate your style?");
+
+      intent = intent.toLowerCase().trim();
+
       let h2 = document.querySelector("h2");
       if (intent === "yes") {
         h2.innerHTML = "Hi, " + name + "! Welcome to House of elegance!";
